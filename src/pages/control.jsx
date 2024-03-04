@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Container from "../components/container"
 import Navbar from "../components/navbar"
-
+import Colage from "../components/colage"
 const Control = () => {
     const [alumnos, setAlumnos] = useState()
     const [alumno, setAlumno] = useState()
@@ -15,14 +15,14 @@ const Control = () => {
 
     const entregar = () => {
         const localEntregas = localStorage.getItem('entregas')
-        if(localEntregas){
+        if (localEntregas) {
             const entregas = JSON.parse(localEntregas)
             const entrega = alumno
             entrega.fecha = Date.now()
             entregas.push(entrega)
             localStorage.setItem('entregas', JSON.stringify(entregas))
-        }else{
-            const entrega = alumno 
+        } else {
+            const entrega = alumno
             entrega.fecha = Date.now()
             localStorage.setItem('entregas', JSON.stringify([entrega]))
         }
@@ -39,12 +39,13 @@ const Control = () => {
             alert("No se encuentra registrado")
             setAlumno(null)
             return
-        }else{
+        } else {
             setAlumno(target[0])
         }
     }
     return (<>
         <Navbar />
+        <Colage />
         <Container>
             <h3>Control de Alumnos</h3>
             <hr />
@@ -63,7 +64,7 @@ const Control = () => {
                     <div className="col-12 p-4">
                         <div className="flex-bet">
                             <h4>Informacion del alumno</h4>
-                            <button onClick={()=>entregar()} className="btn btn-warning px-4" > Entregar Alimentos </button>
+                            <button onClick={() => entregar()} className="btn btn-warning px-4" > Entregar Alimentos </button>
                         </div>
                         Nombre: {alumno.name} <br />
                         Cedula:{alumno.ci}<br />

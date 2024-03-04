@@ -6,7 +6,7 @@ import cabeza from './img/cabeza.png'
 
 function App() {
   return (
-    <div className="bg-gray pb-5">
+    <div className="bg-logo pb-5">
       <div className="container px-0 bg-light shadow" >
         <img src={cabeza} width={'100%'} alt="" />
         <Routes>

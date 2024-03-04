@@ -1,9 +1,10 @@
 import Navbar from "../components/navbar"
 import Container from "../components/container"
+import Colage from "../components/colage"
 const Registro = () => {
     const save = (e) => {
         e.preventDefault()
-        
+
         const alumno = {
             name: e.target.name.value,
             ci: e.target.ci.value,
@@ -23,8 +24,7 @@ const Registro = () => {
             const dbAlumnos = JSON.parse(alumnosPrevios)
             /* console.log(dbAlumnos.filter((al)=>al.ci === alumno.ci))
             return */
-            if((dbAlumnos.filter((al)=>al.ci === alumno.ci)).length > 0)
-            {
+            if ((dbAlumnos.filter((al) => al.ci === alumno.ci)).length > 0) {
                 alert('ERROR: Este alumno ya se encuentra registrado')
                 return
             }
@@ -37,6 +37,7 @@ const Registro = () => {
     }
     return (<>
         <Navbar />
+        <Colage />
         <Container>
             <h3>Registro de alumnos</h3>
             <hr />

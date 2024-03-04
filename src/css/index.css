@@ -1,8 +1,15 @@
-.flex-bet{
+.flex-bet {
     justify-content: space-between;
     display: flex;
     align-items: center;
 }
-.bg-gray{
-    background-color: rgb(218, 218, 218);
+
+.bg-logo {
+    background-size: 80px;
+    background: linear-gradient(rgba(255, 255, 255, 0.918), rgba(255, 255, 255, 0.884)), url('../img/logo.png');
+
+}
+
+.logo {
+    height: 35px;
 }

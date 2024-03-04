@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Container from "../components/container"
 import Navbar from "../components/navbar"
-
+import Colage from "../components/colage"
 const Reporte = () => {
     const [entregas, setEntregas] = useState()
     useEffect(() => {
@@ -14,6 +14,7 @@ const Reporte = () => {
     }, [])
     return (<>
         <Navbar />
+        <Colage />
         <Container>
             {/* <div className="flex-bet"> */}
             <h3>Reporte de entregas</h3>
@@ -47,7 +48,6 @@ const Reporte = () => {
                         </td>
                     </tr>
                     }
-
                 </tbody>
             </table>
         </Container>
