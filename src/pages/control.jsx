@@ -21,15 +21,9 @@ const Control = () => {
             entrega.fecha = Date()
             entregas.push(entrega)
             localStorage.setItem('entregas', JSON.stringify(entregas))
-<<<<<<< HEAD
         } else {
             const entrega = alumno
-            entrega.fecha = Date.now()
-=======
-        }else{
-            const entrega = alumno 
             entrega.fecha = Date()
->>>>>>> 3a67d24bda6c59daaf17c27221a02097c05f896b
             localStorage.setItem('entregas', JSON.stringify([entrega]))
         }
         alert("Se a generado un reporte de entrega")
@@ -72,12 +66,12 @@ const Control = () => {
                             <h4>Informacion del alumno</h4>
                             <button onClick={() => entregar()} className="btn btn-warning px-4" > Entregar Alimentos </button>
                         </div>
-                        
+
                         <div>Nombre: {alumno.name} <br /></div>
                         <div>Cedula:{alumno.ci}<br /></div>
                         <div>Telefono:{alumno.phone}<br /></div>
                         <div>PNF:{alumno.pnf}<br /></div>
-                        
+
                     </div>
                 </> : <div className="p-5 text-center">
                     <h4>Ingrese la cedula del alumno</h4>
