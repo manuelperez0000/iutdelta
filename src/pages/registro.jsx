@@ -1,6 +1,8 @@
 import Navbar from "../components/navbar"
 import Container from "../components/container"
 const Registro = () => {
+    /* function saludar (){alert("Holaaa")}
+    saludar() */
     const save = (e) => {
         e.preventDefault()
         
@@ -10,7 +12,7 @@ const Registro = () => {
             phone: e.target.phone.value,
             pnf: e.target.pnf.value,
             address: e.target.address.value,
-            trimestre: e.target.trimestre.value,
+            trayecto: e.target.trayecto.value,
             edad: e.target.edad.value,
             nacimiento: e.target.nacimiento.value
         }
@@ -85,10 +87,10 @@ const Registro = () => {
                         </tr>
                         <tr>
                             <td>
-                                Trimestre
+                                Trayecto
                             </td>
                             <td>
-                                <input required name="trimestre" type="text" className="form-control" placeholder="Ingrese Trimestre" />
+                                <input required name="trayecto" type="text" className="form-control" placeholder="Ingrese Trayecto" />
                             </td>
                         </tr>
                         <tr>
